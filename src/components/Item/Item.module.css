@@ -1,0 +1,38 @@
+.item {
+  font-size: 14px;
+  padding: 13px 5px;
+  border-top: 1px solid #000;
+  transition: background-color 0.2s;
+}
+
+.done {
+  color: rgb(166, 166, 166);
+  text-decoration: line-through;
+}
+
+.taskContainer {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr auto;
+  gap: 9px;
+}
+
+.editButton {
+  aspect-ratio: 1;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: rgb(146, 175, 173);
+  font-size: 15px;
+  padding: 4px;
+  transition: color 0.3s;
+}
+
+.editButton:hover {
+  color: var(--main-color);
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 9px;
+}
