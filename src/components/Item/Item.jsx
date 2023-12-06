@@ -51,7 +51,7 @@ export function Item({
           <button
             onClick={() => setIsEditTask(true)}
             disabled={status}
-            className={styles.editButton}
+            className={`${styles.editButton} ${status ? styles.disabled : ""}`}
           >
             <FontAwesomeIcon icon={faPenToSquare} />
           </button>

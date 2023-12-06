@@ -28,6 +28,10 @@
   transition: color 0.3s;
 }
 
+.disabled {
+  pointer-events: none;
+}
+
 .editButton:hover {
   color: var(--main-color);
 }
