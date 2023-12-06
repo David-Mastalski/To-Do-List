@@ -19,11 +19,15 @@ export function Form({
       onSubmit={(e) => {
         e.preventDefault();
 
-        if (editedTaskID) {
-          onFormSubmit(inputValue, editedTaskID);
+        if (inputValue === "") {
+          setIsErrorShown(true);
         } else {
-          onFormSubmit(inputValue);
-          setInputValue("");
+          if (editedTaskID) {
+            onFormSubmit(inputValue, editedTaskID);
+          } else {
+            onFormSubmit(inputValue);
+            setInputValue("");
+          }
         }
       }}
       className={styles.form}

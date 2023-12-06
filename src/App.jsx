@@ -10,19 +10,14 @@ import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 function App() {
   // localStorage.removeItem("tasks");
 
-  const [isInputShow, setIsInputShow] = useState(false);
-  // const [todos, setTodos] = useState([
-  //   { id: 1, name: "Kupić nowe BMW M3", done: false },
-  //   { id: 2, name: "Iść na spacer z pieskiem", done: false },
-  //   { id: 3, name: "Naprawić odpływ w garażu", done: true },
-  // ]);
-
   const initialTasks = JSON.parse(localStorage.getItem("tasks")) || [
     { id: 1, name: "Kupić nowe BMW M3", done: false },
     { id: 2, name: "Iść na spacer z Daisy", done: false },
     { id: 3, name: "Naprawić odpływ w garażu", done: true },
   ];
+
   const [todos, setTodos] = useState(initialTasks);
+  const [isInputShow, setIsInputShow] = useState(false);
 
   useEffect(() => {
     const tasksJSON = JSON.stringify(todos);
